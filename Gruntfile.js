@@ -24,11 +24,26 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                 },
+            },
+            jsuglify: {
+                files: ['js/src/app.js'],
+                tasks: ['uglify'],
+                options: {
+                    spawn: false,
+                },
             }
         },
+        uglify: {
+            my_target: {
+                files: {
+                    'js/build/app.min.js': ['js/src/app.js']
+                }
+            }
+        }
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default', ['watch']);
 };

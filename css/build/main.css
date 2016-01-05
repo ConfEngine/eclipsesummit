@@ -553,6 +553,7 @@ header {
 footer {
   background-color: #443266;
   padding: 20px;
+  position: relative;
 }
 
 footer .col-span-4 {
@@ -895,4 +896,22 @@ address a:hover {
   .schedule-wrapper *[class*='col-span'] {
     padding: 0;
   }
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
+  font-weight: 300;
+  margin-top: 15px;
+  font-size: .78em;
+  color: #fff;
+  background-color: #291e3d;
+}
+
+.attribution a {
+  font-size: 1em;
+  color: #8479aa;
 }

@@ -375,6 +375,7 @@ header {
 footer {
     background-color: $darkPurple;
     padding: 20px;
+    position: relative;
 
     .col-span-4 {
         margin-bottom: 0;
@@ -694,7 +695,24 @@ address {
     }
 }
 
+//Footer attribution 
+.attribution {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 7px 0;
+    font-weight: 300;
+    margin-top: 15px;
+    font-size: .78em;
+    color: #fff;
+    @include backgroundOpacity(darken($darkPurple, 12%), 1);
 
+    a {
+        font-size: 1em;
+        color: lighten($link, 15%);
+    }
+}
 
 
 
