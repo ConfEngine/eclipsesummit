@@ -1,0 +1,711 @@
+// Main Sass script file for eclipse summit website
+
+// Pineapple sass partial import
+@import "../../node_modules/pineapple-sass/build/pineapple-sass";
+@import "partials/theme";
+
+body {
+    font-size: 16px;
+    font-family: $baseFont;
+}
+
+// Header styles
+header {
+    position: relative;
+    text-align: center;
+    @include linearGradient(45deg, $lightPurple 0%, $darkPurple 90%);
+}
+
+.masthead-wrapper {
+    padding: 80px 20px 120px;     
+    background-image: url('../../img/mesh.png');
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-position-x: -120px;
+    background-size: cover;
+
+    @media screen and (max-width: $largeBreakpoint) {
+        padding-top: 60px;
+        background-position-y: 50px;
+        background-position-x: -220px;
+    }
+}
+
+.logo {
+    img {
+        width: 350px;
+        height: auto;
+
+        @media screen and (max-width: $mediumBreakpoint) {
+	    	width: 100%;
+	    }
+    }
+}
+
+// Header title styles
+.main-heading {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 15px;
+    @include boxSizing(border-box);
+
+     @media screen and (max-width: $mediumBreakpoint) {
+    	padding: 15px 5px;
+    }
+}
+
+.section {
+    padding: 70px 20px;
+    text-align: center;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+    	padding: 40px 20px;
+    }
+}
+
+.about {
+	background-color: $thinPurple;
+	border-bottom: 1px solid $mediumGrey;
+}
+
+// Common section title styles
+.section-heading {
+    color: $darkPurple;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+
+// Common section text styles
+.section-text {
+    width: 60%;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.05em;
+    line-height: 28px;
+    color: $textDark;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+		width: 100%;
+		font-size: 1em;
+        line-height: 25px;
+	}
+}
+
+.register-btn {
+	background-color: transparent;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: 300;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    margin: 40px 10px 0;
+    font-family: Lato, sans-serif;
+    @include transition(all, .20s, ease-in-out);
+    @include noFocus;
+    @include boxShadow(4px 4px 0px #fff);
+
+    &:hover {
+    	@include backgroundOpacity(#fff, .08);
+    	text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+    }
+
+    @media screen and (max-width: $smallBreakpoint) {
+        padding: 15px 30px;
+    }
+}
+
+.map-marker-icon {
+	vertical-align: middle;
+}
+
+// Speakers section styles
+.speaker-image {
+	width: 120px;
+	height: auto;
+}
+
+.speaker-name {
+	margin: 10px 0 0;
+	color: $darkPurple;
+
+	@media screen and (max-width: $smallBreakpoint) {
+		font-size: 1.05em;
+		line-height: 20px;
+	}
+}
+
+.speakers {
+	.grid-row {
+		width: 60%;
+    	margin: 30px auto 0;
+
+    	@media screen and (max-width: $largeBreakpoint) {
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: $smallBreakpoint) {
+		padding: 40px 0;
+	}
+}
+
+// Navigation 
+.navigation {
+    @include backgroundOpacity(darken($darkPurple, 5%), .92);
+	list-style: none;
+    border-top: 1px solid lighten($darkPurple, 3%);
+	margin: 0;
+    text-align: center;
+	padding: 20px 0;
+	@include transition(all, 0.35s, ease-in-out);
+
+	li {
+		display: inline-block;
+		margin: 0 20px;
+
+		a {
+			color: #fff;
+			text-transform: uppercase;
+			font-size: .95em;
+            font-weight: 300;
+		}
+
+		@media screen and (max-width: $mediumBreakpoint) {
+			margin: 0 10px 10px;
+		}
+	}
+
+	@media screen and (max-width: $mediumBreakpoint) {
+		margin-bottom: 40px;
+		padding: 0;
+	}
+
+	@media screen and (max-width: $largeBreakpoint) {
+		display: none;
+	}
+}
+
+.navigation-fixed {
+	position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    margin-top: 0;
+    padding: 15px 0;
+    z-index: 2;
+    @include boxSizing(border-box);
+}
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+    right: 4%;
+    top: 4%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+
+    li {
+    	padding: 2px 18px;
+	    background-color: $navPurple;
+	    margin-bottom: 7px;
+	    @include boxShadow(1px 1px 1px rgba(0,0,0,.45));
+	    z-index: 1;
+    }
+
+	@media screen and (max-width: $largeBreakpoint) {
+		display: block;
+	}
+}
+
+.mobile-nav-menu {
+	display: none;
+	position: fixed;
+    @include backgroundOpacity($darkPurple, .92);
+    color: #fff;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1500;
+
+     ul {
+     	list-style: none;
+     	padding: 0;
+     	margin: 10% 0 0;
+        text-align: center;
+
+     	li {
+     		padding: 10px; 
+
+     		a {
+     			color: #fff;
+     			font-size: 1.5em;
+     		}
+     	}
+     }
+}
+
+.mobile-nav-menu-close {
+	position: absolute;
+    right: 4%;
+    top: 0;
+    font-size: 3em;
+    font-weight: 300;
+    width: 40px;
+    height: 80px;
+    z-index: 2000;
+}
+
+// Sponsors block styles
+.sponsors {
+	background-color: $thinPurple;
+	border-top: 1px solid lighten($lighterPurple, 5%);
+    border-bottom: 1px solid lighten($lighterPurple, 5%);
+
+	img {
+		margin: 0 15px 40px;
+		opacity: .75;
+		@include transition(all, 0.15s, ease-in-out);
+	}
+
+	.grid-row {
+		width: 60%;
+    	margin: 30px auto 0;
+
+    	a:hover img {
+    		opacity: 1;
+    	}
+
+    	a:hover {
+    		text-decoration: none;
+    	}
+
+    	@media screen and (max-width: $largeBreakpoint) {
+			width: 100%;
+		}
+	}
+}
+
+// Venue block styles
+.venue,
+.venue-image {
+    padding: 0;
+}
+
+.venue-image {
+    height: 450px;
+    background-image: url('../../img/venue.jpg');
+    background-size: cover;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $smallBreakpoint) {
+       height: 300px;
+    }
+}
+
+.venue-name {
+    @include backgroundOpacity(#000, .5);
+    height: 100%;
+    position: relative;
+
+    span {
+        position: absolute;
+        width: 60%;
+        left: 20%;
+        color: #fff;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        top: 45%;
+        font-weight: 400;
+
+        @media screen and (max-width: $smallBreakpoint) {
+           width: 90%;
+           font-size: 1.25em;
+           left: 5%;
+        }
+    }
+}
+
+.venue-details {
+    height: 450px;
+    padding: 70px 20px;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        padding: 40px 20px;
+    }
+
+    @media screen and (max-width: $largeBreakpoint) {
+        height: auto;
+    }
+}
+
+.book-btn,
+.become-speaker-dark {
+    border-color: $darkPurple;
+    color: $darkPurple;
+    @include boxShadow(4px 4px 0 $darkPurple);
+}
+
+// Bottom register block 
+.register-bottom {
+    background-color: darken($link, 5%);
+
+    .section-heading,
+    .section-text {
+        color: #fff;
+    }
+}
+
+// Footer styles 
+footer {
+    background-color: $darkPurple;
+    padding: 20px;
+
+    .col-span-4 {
+        margin-bottom: 0;
+
+        @media screen and (max-width: $mediumBreakpoint) {
+            width: 100%;
+        }
+    }
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.copyright {
+    color: #fff;
+    font-weight: 300;
+    font-size: .95em;
+}
+
+address {
+    display: inline-block;
+
+    a {
+        display: inline-block;
+        color: #fff;
+        font-weight: 300;
+        font-size: .95em;
+        font-style: normal;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+        vertical-align: super;
+        margin-left: 10px;
+
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+// Schedule block styles
+
+#schedule {
+    position: relative;
+}
+
+.eclipse-bg {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    top: -8%;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        width: 50%;
+        top: -3%;
+    }
+
+     @media screen and (max-width: $smallBreakpoint) {
+        width: 100%;
+        top: -2%;
+    }
+}
+
+.schedule {
+    border-top: 1px solid lighten($lighterPurple, 5%);  
+    padding: 70px 20px 0; 
+}
+
+.schedule-wrapper {
+    padding: 0;
+    list-style: none;
+    width: 65%;
+    margin: 60px auto 0;
+
+    @media screen and (max-width: $largeBreakpoint) {
+        width: 100%;
+    }
+
+    li {
+        margin-bottom: 45px;
+    }
+
+    .col-span-6 {
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+}
+
+.timestamp {
+    float: left;
+    margin-top: -18px;
+    background: #fff;
+    padding: 5px 10px;
+    color: $darkPurple;
+    font-weight: 400;
+    border: 1px solid $darkPurple;
+    box-shadow: 2px 2px 0px $darkPurple;
+}
+
+.timestamp-separator {
+    border-top: 1px solid $darkPurple;
+}
+
+.timestamp-separator + .event-text {
+    padding: 12px 10px 4px;
+}
+
+.event-text {
+    color: $textDark;
+    font-weight: 400;
+    font-size: 1.05em;
+    text-align: center;
+    color: $darkPurple;
+    padding: 5px 0;
+    clear: both;
+    padding: 12px 0 4px;
+    text-align: left;
+}
+
+.event-subtext {
+    text-align: left;
+    font-size: .85em;
+    font-weight: 300;
+}
+
+.schedule-row {
+
+    .col-span-4,
+    .col-span-6 {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        @media screen and (max-width: $mediumBreakpoint) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Organiser section
+.organisers {
+    background-color: $thinPurple;
+    border-top: 1px solid lighten($lighterPurple, 5%);
+    border-bottom: 1px solid lighten($lighterPurple, 5%);
+
+    .grid-row {
+        width: 60%;
+        margin: 30px auto 0;
+
+        @media screen and (max-width: $largeBreakpoint) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $smallBreakpoint) {
+        padding: 40px 0;
+    }
+}
+
+.organiser-job {
+    font-weight: 400;
+    font-size: .85em;
+    color: $lightPurple;
+    margin: 0;
+}
+
+// Hackathon styles
+.hack-image {
+    background-image: url('../../img/hackathon.jpg');
+}
+
+.intro-line {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.25em;
+    margin: 10px 0 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        font-size: 1.2em;
+        line-height: 25px;
+    }
+}
+
+.location {
+    margin-bottom: 35px;
+    font-size: 1.35em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+.header-social {
+    margin-top: 40px;
+}
+
+// Price chart
+.pricing-table {
+    width: 50%;
+    margin: 40px auto 20px;
+    color: #fff;
+    text-align: left;
+    font-size: .9em;
+    border: 2px solid $darkPurple;
+
+    thead {
+        background-color: $darkPurple;
+    }
+
+    tr {
+        border-bottom: 2px solid $darkPurple;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-weight: 300
+    }
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        width: 100%;
+    }
+}
+
+.call-for-speakers {
+    @media screen and (max-width: $smallBreakpoint) {
+        padding: 0 20px;
+        @include boxSizing(border-box);
+    }
+}
+
+.eclipse-bg-bottom {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    bottom: -10%;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        bottom: -4%;
+    }
+
+     @media screen and (max-width: $smallBreakpoint) {
+        width: 70%;
+        bottom: -3%;
+    }
+}
+
+// Schedule event styles
+.event-wrapper {
+    padding: 0 15px 15px;
+    margin-top: 15px;
+    @include linearGradient(-45deg, #ffffff 0%,$thinPurple 99%);
+    border-bottom: 1px solid $lighterPurple;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        display: block;
+    }
+}
+
+.event-subtext {
+    margin-top: 10px;
+}
+
+.duration {
+    margin-top: 15px;
+    text-align: left;
+    font-weight: 400;
+    font-size: .85em;
+    color: $darkPurple;
+
+    img {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
+
+.become-speaker {
+    position: relative;
+    z-index: 1;
+}
+
+.event-long {
+    vertical-align: top;
+}
+
+.schedule-table {
+    border-collapse: separate;
+    border-spacing: 8px 15px;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        border-collapse: collapse;
+    }
+}
+
+.mid-event-timestamp {
+    border-top: 20px solid #fff;
+    position: relative;
+    left: -10px;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+        display: block;
+        margin-top: 25px;
+        left: 0;
+    }
+}
+
+.schedule-wrapper {
+    @media screen and (max-width: $mediumBreakpoint) {
+        *[class*='col-span'] {
+            padding: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
