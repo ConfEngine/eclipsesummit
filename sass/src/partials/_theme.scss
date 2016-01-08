@@ -20,141 +20,109 @@ $mediumBreakpoint: 767px;
 $smallBreakpoint: 480px;
 
 // Theme styles
-
 h1 {
-	font-size: 1.55em;
+  font-size: 1.55em;
 
-	@media screen and (max-width: $mediumBreakpoint) {
-		font-size: 1.25em;
-	}
+  @media screen and (max-width: $mediumBreakpoint) {
+    font-size: 1.25em;
+  }
 }
 
 h2 {
-    font-size: 1.15em;
-    font-weight: 400;
+  font-size: 1.15em;
+  font-weight: 400;
 }
 
 a {
-	font-size: .85em;
-	font-weight: 400;
-    color: $link;
-    text-decoration: none;
+  font-size: .85em;
+  font-weight: 400;
+  color: $link;
+  text-decoration: none;
 
-    &:hover {
-    	color: $darkPurple;
-    	text-decoration: underline;
-    }
+  &:hover {
+    color: $darkPurple;
+    text-decoration: underline;
+  }
 }
 
 // Grid system 
 .grid-row {
-    @include clearfix;
+  @include clearfix;
 }
 
 *[class*='col-span'] {
-    float: left;
-    padding: 0 15px;
-    @include boxSizing(border-box);
-    text-align: center;
-    margin-bottom: 40px;
+  float: left;
+  padding: 0 15px;
+  @include boxSizing(border-box);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .col-span-4 {
-    width: 33.3333%;
+  width: 33.3333%;
 
-    @media screen and (max-width: $smallBreakpoint) {
-        width: 50%;
-    }
+  @media screen and (max-width: $smallBreakpoint) {
+    width: 50%;
+  }
 }
 
 .col-span-6 {
-    width: 50%;
+  width: 50%;
 
-    @media screen and (max-width: $mediumBreakpoint) {
-        width: 100%;
-    }
+  @media screen and (max-width: $mediumBreakpoint) {
+    width: 100%;
+  }
 }
 
-.col-span-8, {
-    width: 66.6666%;
+.col-span-8 {
+  width: 66.6666%;
 
-    @media screen and (max-width: $mediumBreakpoint) {
-        width: 100%;
-    }
+  @media screen and (max-width: $mediumBreakpoint) {
+    width: 100%;
+  }
 }
 
 // Tabs UI
 .tabs {
-    list-style: none;
-    padding: 0;
-    margin: 40px auto;
-    width: 60%;
-    @include clearfix;
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  width: 60%;
+  @include clearfix;
 
-    @media screen and (max-width: $largeBreakpoint) {
-        width: 100%;
-    }
+  @media screen and (max-width: $largeBreakpoint) {
+    width: 100%;
+  }
 }
 
 .tab-heading {
-    display: inline-block;
-    float: left;
-    text-align: center;
-    width: 33.3333%;
-    padding: 12px 10px;
-    @include boxSizing(border-box);
-    font-weight: 300;
-    background-color: $thinPurple;
-    @include transition(all, .2s, ease-in-out);
-    @include cursorPointer;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 33.3333%;
+  padding: 12px 10px;
+  @include boxSizing(border-box);
+  font-weight: 300;
+  background-color: $thinPurple;
+  @include transition(all, .2s, ease-in-out);
+  @include cursorPointer;
+
+  &:hover {
+    background-color: darken($thinPurple, 3%);
+  }
+
+  &.active {
+    background-color: $darkPurple;
+    color: #fff;
+    font-weight: 400;
 
     &:hover {
-        background-color: darken($thinPurple, 3%);
+      background-color: $darkPurple;
     }
-
-    &.active {
-        background-color: $darkPurple;
-        color: #fff;
-        font-weight: 400;
-
-        &:hover {
-            background-color: $darkPurple;
-        }
-    }
+  }
 }
 
 .mid-tab {
-    border-left: 1px solid $lighterPurple;
-    border-right: 1px solid $lighterPurple;
+  border-left: 1px solid $lighterPurple;
+  border-right: 1px solid $lighterPurple;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

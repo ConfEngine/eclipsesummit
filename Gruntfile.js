@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         sass: {
             options: {
@@ -22,15 +22,15 @@ module.exports = function(grunt) {
                 files: ['sass/src/main.scss', 'css/build/main.css'],
                 tasks: ['sass', 'cssmin'],
                 options: {
-                    spawn: false,
-                },
+                    spawn: false
+                }
             },
             jsuglify: {
                 files: ['js/src/app.js'],
                 tasks: ['uglify'],
                 options: {
-                    spawn: false,
-                },
+                    spawn: false
+                }
             }
         },
         uglify: {
