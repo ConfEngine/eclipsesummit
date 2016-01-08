@@ -84,7 +84,8 @@ header {
 // Common section text styles
 .section-text {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  text-align: justify;
   font-weight: 300;
   font-size: 1.05em;
   line-height: 28px;
@@ -105,14 +106,17 @@ header {
   font-weight: 300;
   border: 2px solid #fff;
   text-transform: uppercase;
-  margin: 40px 10px 0;
+  margin: 20px 10px 0;
   font-family: Lato, sans-serif;
+  display: inline-block;
   @include transition(all, .20s, ease-in-out);
   @include noFocus;
   @include boxShadow(4px 4px 0px #fff);
 
   &:hover {
     @include backgroundOpacity(#fff, .08);
+    color: #fff;
+    text-decoration: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
   }
 
@@ -175,6 +179,10 @@ header {
       text-transform: uppercase;
       font-size: .95em;
       font-weight: 300;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     @media screen and (max-width: $mediumBreakpoint) {
@@ -358,6 +366,10 @@ header {
   border-color: $darkPurple;
   color: $darkPurple;
   @include boxShadow(4px 4px 0 $darkPurple);
+
+  &:hover {
+    color: $darkPurple;
+  }
 }
 
 // Bottom register block 
@@ -453,7 +465,7 @@ address {
 .schedule-wrapper {
   padding: 0;
   list-style: none;
-  width: 65%;
+  width: 60%;
   margin: 60px auto 0;
 
   @media screen and (max-width: $largeBreakpoint) {

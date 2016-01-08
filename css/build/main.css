@@ -14,7 +14,6 @@ h2 {
 }
 
 a {
-  font-size: .85em;
   font-weight: 400;
   color: #5E5383;
   text-decoration: none;
@@ -219,7 +218,8 @@ header {
 
 .section-text {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  text-align: justify;
   font-weight: 300;
   font-size: 1.05em;
   line-height: 28px;
@@ -242,8 +242,9 @@ header {
   font-weight: 300;
   border: 2px solid #fff;
   text-transform: uppercase;
-  margin: 40px 10px 0;
+  margin: 20px 10px 0;
   font-family: Lato, sans-serif;
+  display: inline-block;
   -webkit-transition: all, 0.2s, ease-in-out;
   -moz-transition: all, 0.2s, ease-in-out;
   -o-transition: all, 0.2s, ease-in-out;
@@ -261,6 +262,8 @@ header {
 
 .register-btn:hover {
   background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -332,6 +335,10 @@ header {
   text-transform: uppercase;
   font-size: .95em;
   font-weight: 300;
+}
+
+.navigation li a:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -541,6 +548,11 @@ header {
   box-shadow: 4px 4px 0 #443266;
 }
 
+.book-btn:hover,
+.become-speaker-dark:hover {
+  color: #443266;
+}
+
 .register-bottom {
   background-color: #534973;
 }
@@ -638,7 +650,7 @@ address a:hover {
 .schedule-wrapper {
   padding: 0;
   list-style: none;
-  width: 65%;
+  width: 60%;
   margin: 60px auto 0;
 }
 
