@@ -6,6 +6,7 @@
 body {
   font-size: 16px;
   font-family: $baseFont;
+  color: $textDark;
 }
 
 // Header styles
@@ -17,7 +18,7 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url('../../img/mesh.png');
+  background-image: url('../../img/mesh2.png');
   background-position-y: 80px;
   background-repeat: no-repeat;
   background-position-x: -120px;
@@ -84,11 +85,10 @@ header {
 // Common section text styles
 .section-text {
   width: 60%;
-  margin: 0 auto 30px;
-  text-align: justify;
+  margin: 0 auto 20px;
   font-weight: 300;
   font-size: 1.05em;
-  line-height: 28px;
+  line-height: 26px;
   color: $textDark;
 
   @media screen and (max-width: $mediumBreakpoint) {
@@ -311,8 +311,16 @@ header {
   padding: 0;
 }
 
+.venue {
+  .col-span-6 {
+    @media screen and (max-width: $largeBreakpoint) {
+      width: 100%;
+    }
+  }
+}
+
 .venue-image {
-  height: 450px;
+  height: 500px;
   background-image: url('../../img/venue.jpg');
   background-size: cover;
   margin-bottom: 0;
@@ -351,6 +359,10 @@ header {
   height: 450px;
   padding: 70px 20px;
   margin-bottom: 0;
+
+  p {
+    width: 80%;
+  }
 
   @media screen and (max-width: $mediumBreakpoint) {
     padding: 40px 20px;
@@ -719,5 +731,31 @@ address {
   a {
     font-size: 1em;
     color: lighten($link, 15%);
+  }
+}
+
+//Sponsorship list styles 
+.sponsorship-list {
+  list-style: none;
+  font-family: $baseFont;
+  font-weight: 300;
+
+  li {
+    font-size: 1.05em;
+    margin-bottom: 5px;
+
+    strong {
+      font-weight: 400;
+      color: $darkPurple;
+    }
+  }
+} 
+
+.para-light {
+  color: #fff;
+  font-size: .9em;
+
+  a {
+    color: #222;
   }
 }

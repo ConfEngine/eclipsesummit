@@ -6,6 +6,7 @@
             $("html, body").animate({
                 scrollTop: $("#" + section).offset().top
             }, speed);
+            history.pushState(null, null, '#'+section);
             return false;
         };
         $('.navigation li, .mobile-nav-menu li').on('click', function() {
@@ -21,6 +22,7 @@
         $(window).scroll(function(event) {
             var scroll = $(window).scrollTop();
             var $navigation = $('.navigation');
+            
             scroll > 535 ? $navigation.addClass('navigation-fixed', 200) : $navigation.removeClass('navigation-fixed', 200);
         });
         $('.mobile-nav').click(function() {

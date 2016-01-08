@@ -3,7 +3,7 @@
 // Color palette
 $darkPurple: #443266;
 $lightPurple: #5e5383;
-$textDark: #222;
+$textDark: #444;
 $lightGrey: #f3f5f7;
 $mediumGrey: #e8e8e8;
 $link: #5E5383;
@@ -31,6 +31,11 @@ h1 {
 h2 {
   font-size: 1.15em;
   font-weight: 400;
+  color: $darkPurple;
+}
+
+h3 {
+  color: $darkPurple;
 }
 
 a {

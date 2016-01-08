@@ -11,6 +11,11 @@ h1 {
 h2 {
   font-size: 1.15em;
   font-weight: 400;
+  color: #443266;
+}
+
+h3 {
+  color: #443266;
 }
 
 a {
@@ -133,6 +138,7 @@ a:hover {
 body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  color: #444;
 }
 
 header {
@@ -146,7 +152,7 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url("../../img/mesh.png");
+  background-image: url("../../img/mesh2.png");
   background-position-y: 80px;
   background-repeat: no-repeat;
   background-position-x: -120px;
@@ -218,12 +224,11 @@ header {
 
 .section-text {
   width: 60%;
-  margin: 0 auto 30px;
-  text-align: justify;
+  margin: 0 auto 20px;
   font-weight: 300;
   font-size: 1.05em;
-  line-height: 28px;
-  color: #222;
+  line-height: 26px;
+  color: #444;
 }
 
 @media screen and (max-width: 767px) {
@@ -481,8 +486,14 @@ header {
   padding: 0;
 }
 
+@media screen and (max-width: 991px) {
+  .venue .col-span-6 {
+    width: 100%;
+  }
+}
+
 .venue-image {
-  height: 450px;
+  height: 500px;
   background-image: url("../../img/venue.jpg");
   background-size: cover;
   margin-bottom: 0;
@@ -525,6 +536,10 @@ header {
   height: 450px;
   padding: 70px 20px;
   margin-bottom: 0;
+}
+
+.venue-details p {
+  width: 80%;
 }
 
 @media screen and (max-width: 767px) {
@@ -923,4 +938,29 @@ address a:hover {
 .attribution a {
   font-size: 1em;
   color: #8479aa;
+}
+
+.sponsorship-list {
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.sponsorship-list li {
+  font-size: 1.05em;
+  margin-bottom: 5px;
+}
+
+.sponsorship-list li strong {
+  font-weight: 400;
+  color: #443266;
+}
+
+.para-light {
+  color: #fff;
+  font-size: .9em;
+}
+
+.para-light a {
+  color: #222;
 }
