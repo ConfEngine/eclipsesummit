@@ -13,12 +13,13 @@ body {
 header {
   position: relative;
   text-align: center;
-  @include linearGradient(45deg, $lightPurple 0%, $darkPurple 90%);
+  //@include linearGradient(45deg, $lightPurple 0%, $darkPurple 25%);
+  background-color: $darkPurple;
 }
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url('../../img/mesh3.png');
+  background-image: url('../../img/mesh4.png');
   background-position-y: 80px;
   background-repeat: no-repeat;
   background-position-x: 85%;
