@@ -91,5 +91,11 @@
             $('.mobile-nav-menu').fadeOut(150);
             return false;
         });
+
+        //
+        $('.text-toggle-expand').click(function() {
+            $(this).hide();
+            $(this).prev('.text-toggle').css('height', 'auto');
+        });
     });
 })();

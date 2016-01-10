@@ -953,6 +953,10 @@ address a:hover {
   color: #8479aa;
 }
 
+.sponsor-heading {
+  margin-top: 30px;
+}
+
 .sponsorship-list {
   list-style: none;
   font-family: "Open Sans", sans-serif;
@@ -978,4 +982,19 @@ address a:hover {
 .para-light a {
   color: #fff;
   text-decoration: underline;
+}
+
+.text-toggle {
+  height: 200px;
+  overflow: hidden;
+}
+
+.text-toggle + .text-toggle-expand {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+.text-toggle + .text-toggle-expand:hover {
+  cursor: pointer;
 }

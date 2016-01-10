@@ -748,6 +748,10 @@ address {
 }
 
 //Sponsorship list styles 
+.sponsor-heading {
+  margin-top: 30px;
+}
+
 .sponsorship-list {
   list-style: none;
   font-family: $baseFont;
@@ -774,3 +778,17 @@ address {
     text-decoration: underline;
   }
 }
+
+// Text toggle 
+.text-toggle {
+  height: 200px;
+  overflow: hidden;
+
+  &+.text-toggle-expand {
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: underline;
+    @include cursorPointer;
+  } 
+}
+
