@@ -152,10 +152,10 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url("../../img/mesh2.png");
+  background-image: url("../../img/mesh3.png");
   background-position-y: 80px;
   background-repeat: no-repeat;
-  background-position-x: -120px;
+  background-position-x: 85%;
   background-size: cover;
 }
 
@@ -374,6 +374,7 @@ header {
   top: 0;
   margin-top: 0;
   z-index: 2;
+  background-color: rgba(57, 42, 85, 0.82);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -975,5 +976,6 @@ address a:hover {
 }
 
 .para-light a {
-  color: #34264e;
+  color: #fff;
+  text-decoration: underline;
 }

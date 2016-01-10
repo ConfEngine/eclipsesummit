@@ -18,10 +18,10 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url('../../img/mesh2.png');
+  background-image: url('../../img/mesh3.png');
   background-position-y: 80px;
   background-repeat: no-repeat;
-  background-position-x: -120px;
+  background-position-x: 85%;
   background-size: cover;
 
   @media screen and (max-width: $largeBreakpoint) {
@@ -209,6 +209,7 @@ header {
   top: 0;
   margin-top: 0;
   z-index: 2;
+  @include backgroundOpacity(darken($darkPurple, 5%), .82);
   @include boxSizing(border-box);
 
   li {
@@ -769,6 +770,7 @@ address {
   font-size: .9em;
 
   a {
-    color: darken($darkPurple, 7%);
+    color: #fff;
+    text-decoration: underline;
   }
 }
