@@ -147,17 +147,17 @@ header {
 }
 
 .speakers {
-  .grid-row {
-    width: 60%;
-    margin: 30px auto 0;
-
-    @media screen and (max-width: $largeBreakpoint) {
-      width: 100%;
-    }
-  }
-
   @media screen and (max-width: $smallBreakpoint) {
     padding: 40px 0;
+  }
+}
+
+.speakers-row {
+  width: 60%;
+  margin: 30px auto 0;
+
+  @media screen and (max-width: $largeBreakpoint) {
+    width: 100%;
   }
 }
 
@@ -294,12 +294,6 @@ header {
   border-top: 1px solid lighten($lighterPurple, 5%);
   border-bottom: 1px solid lighten($lighterPurple, 5%);
 
-  img {
-    margin: 0 15px 40px;
-    opacity: .75;
-    @include transition(all, 0.15s, ease-in-out);
-  }
-
   .grid-row {
     width: 60%;
     margin: 30px auto 0;
@@ -316,6 +310,12 @@ header {
       width: 100%;
     }
   }
+}
+
+.sponsor-img {
+  margin: 0 15px 40px;
+  opacity: .75;
+  @include transition(all, 0.15s, ease-in-out);
 }
 
 // Venue block styles
@@ -347,24 +347,24 @@ header {
   @include backgroundOpacity(#000, .55);
   height: 100%;
   position: relative;
+}
 
-  span {
-    position: absolute;
-    width: 70%;
-    left: 15%;
-    color: #fff;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    display: inline-block;
-    text-align: center;
-    top: 45%;
-    font-weight: 400;
+.col-overlay-text {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  color: #fff;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  top: 45%;
+  font-weight: 400;
 
-    @media screen and (max-width: $smallBreakpoint) {
-      width: 90%;
-      font-size: 1.25em;
-      left: 5%;
-    }
+  @media screen and (max-width: $smallBreakpoint) {
+    width: 90%;
+    font-size: 1.25em;
+    left: 5%;
   }
 }
 
@@ -412,13 +412,13 @@ footer {
   background-color: $darkPurple;
   padding: 20px;
   position: relative;
+}
 
-  .col-span-4 {
-    margin-bottom: 0;
+.footer-col { 
+  margin-bottom: 0;
 
-    @media screen and (max-width: $mediumBreakpoint) {
-      width: 100%;
-    }
+  @media screen and (max-width: $mediumBreakpoint) {
+    width: 100%;
   }
 }
 
@@ -436,26 +436,26 @@ footer {
 address {
   display: inline-block;
 
-  a {
-    display: inline-block;
-    color: #fff;
-    font-weight: 300;
-    font-size: .95em;
-    font-style: normal;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
-    vertical-align: super;
-    margin-left: 10px;
-
-    &:hover {
-      text-decoration: none;
-      color: #fff;
-    }
-  }
-
   @media screen and (max-width: $mediumBreakpoint) {
     margin-top: 10px;
     margin-bottom: 30px;
+  }
+}
+
+.email-link {
+  display: inline-block;
+  color: #fff;
+  font-weight: 300;
+  font-size: .95em;
+  font-style: normal;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  vertical-align: super;
+  margin-left: 10px;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
   }
 }
 
@@ -561,17 +561,17 @@ address {
   border-top: 1px solid lighten($lighterPurple, 5%);
   border-bottom: 1px solid lighten($lighterPurple, 5%);
 
-  .grid-row {
-    width: 60%;
-    margin: 30px auto 0;
-
-    @media screen and (max-width: $largeBreakpoint) {
-      width: 100%;
-    }
-  }
-
   @media screen and (max-width: $smallBreakpoint) {
     padding: 40px 0;
+  }
+}
+
+.organisers-row {
+  width: 60%;
+  margin: 30px auto 0;
+
+  @media screen and (max-width: $largeBreakpoint) {
+    width: 100%;
   }
 }
 
@@ -619,10 +619,6 @@ address {
   font-size: .9em;
   border: 2px solid $darkPurple;
 
-  thead {
-    background-color: $darkPurple;
-  }
-
   tr {
     border-bottom: 2px solid $darkPurple;
   }
@@ -636,6 +632,10 @@ address {
   @media screen and (max-width: $mediumBreakpoint) {
     width: 100%;
   }
+}
+
+.pricing-table-header {
+  background-color: $darkPurple;
 }
 
 .call-for-speakers {
@@ -762,21 +762,25 @@ address {
   li {
     font-size: 1.05em;
     margin-bottom: 5px;
-
-    strong {
-      font-weight: 400;
-      color: $darkPurple;
-    }
   }
 } 
+
+.sponsorship-type {
+  font-weight: 400;
+  color: $darkPurple;
+}
 
 .para-light {
   color: #fff;
   font-size: .9em;
+}
 
-  a {
+.link-light {
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover {
     color: #fff;
-    text-decoration: underline;
   }
 }
 
@@ -784,12 +788,12 @@ address {
 .text-toggle {
   height: 200px;
   overflow: hidden;
-
-  &+.text-toggle-expand {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: underline;
-    @include cursorPointer;
-  } 
 }
+
+.text-toggle-expand {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: underline;
+  @include cursorPointer;
+} 
 
