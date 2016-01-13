@@ -12,6 +12,7 @@ $thinPurple: #F2F1F5;
 $lighterPurple: #D6D1E0;
 
 // Base font 
+$baseFontSize: 16px;
 $baseFont: 'Open Sans', sans-serif;
 
 // Mobile screen breakpoints
@@ -54,12 +55,19 @@ a {
   @include clearfix;
 }
 
-*[class*='col-span'] {
-  float: left;
-  padding: 0 15px;
-  @include boxSizing(border-box);
-  text-align: center;
-  margin-bottom: 40px;
+
+// Grid column classnames
+$gridCols: ".col-span-4", ".col-span-6", ".col-span-8";
+
+// Looping through grid columns to assign common CSS
+@each $col in $gridCols {
+  #{$col} {
+    float: left;
+    padding: 0 15px;
+    @include boxSizing(border-box);
+    text-align: center;
+    margin-bottom: 40px;
+    }
 }
 
 .col-span-4 {
