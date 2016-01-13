@@ -164,23 +164,21 @@ body {
 header {
   position: relative;
   text-align: center;
-  background-color: #443266;
+  background: -webkit-linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
+  background: -moz-linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
+  background: -o-linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
+  background: linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
 }
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background-image: url("../../img/mesh4.png");
-  background-position-y: 80px;
-  background-repeat: no-repeat;
-  background-position-x: 85%;
-  background-size: cover;
+  background: url("../../img/mesh-bottom-right.png") bottom right no-repeat, url("../../img/mesh-top-left.png") top left no-repeat;
+  background-size: 32%, 28%;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .masthead-wrapper {
-    padding-top: 60px;
-    background-position-y: 50px;
-    background-position-x: -220px;
+    background: none;
   }
 }
 
