@@ -172,8 +172,13 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
-  background: url("../../img/mesh-bottom-right.png") bottom right no-repeat, url("../../img/mesh-top-left.png") top left no-repeat;
-  background-size: 32%, 28%;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  background: url("../../img/mesh-bottom-right.png") bottom right no-repeat, url("../../img/mesh-top-left.png") bottom left no-repeat;
+  background-size: 50%, 50%;
 }
 
 @media screen and (max-width: 767px) {

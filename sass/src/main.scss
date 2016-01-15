@@ -20,13 +20,14 @@ header {
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
+  @include transition(opacity .2s ease-in);
   // background-image: url('../../img/mesh4.png');
   // background-position-y: 80px;
   // background-repeat: no-repeat;
   // background-position-x: 85%;
   // background-size: cover;
-  background: url('../../img/mesh-bottom-right.png') bottom right no-repeat, url('../../img/mesh-top-left.png') top left no-repeat;
-  background-size: 32%, 28%;
+  background: url('../../img/mesh-bottom-right.png') bottom right no-repeat, url('../../img/mesh-top-left.png') bottom left no-repeat;
+  background-size: 50%, 50%;
 
   // @media screen and (max-width: $largeBreakpoint) {
   //   padding-top: 60px;
