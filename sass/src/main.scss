@@ -16,26 +16,26 @@ header {
   //@include linearGradient(45deg, $lightPurple 0%, $darkPurple 25%);
   //background-color: $darkPurple;
   @include linearGradient(45deg, darken($darkPurple, 3.2%) 51%, $darkPurple 50%);
+  overflow: hidden;
 }
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
+  position: relative;
+  z-index: 2;
   @include transition(opacity .2s ease-in);
-  // background-image: url('../../img/mesh4.png');
-  // background-position-y: 80px;
-  // background-repeat: no-repeat;
-  // background-position-x: 85%;
-  // background-size: cover;
+}
+
+.mesh-layer {
   background: url('../../img/mesh-bottom-right.png') bottom right no-repeat, url('../../img/mesh-top-left.png') bottom left no-repeat;
   background-size: 50%, 50%;
+  position: absolute;
+  z-index: 1;
+  height: 515px;
+  width: 100%;
+  opacity: .65;
 
-  // @media screen and (max-width: $largeBreakpoint) {
-  //   padding-top: 60px;
-  //   background-position-y: 50px;
-  //   background-position-x: -220px;
-  // }
-
-  @media screen and (max-width: $mediumBreakpoint) {
+  @media screen and (max-width: $largeBreakpoint) {
     background: none;
   }
 }

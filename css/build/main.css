@@ -168,21 +168,32 @@ header {
   background: -moz-linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
   background: -o-linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
   background: linear-gradient(45deg, #3d2d5b 51%, #443266 50%);
+  overflow: hidden;
 }
 
 .masthead-wrapper {
   padding: 80px 20px 120px;
+  position: relative;
+  z-index: 2;
   -webkit-transition: opacity 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in;
   -o-transition: opacity 0.2s ease-in;
   -ms-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
-  background: url("../../img/mesh-bottom-right.png") bottom right no-repeat, url("../../img/mesh-top-left.png") bottom left no-repeat;
-  background-size: 50%, 50%;
 }
 
-@media screen and (max-width: 767px) {
-  .masthead-wrapper {
+.mesh-layer {
+  background: url("../../img/mesh-bottom-right.png") bottom right no-repeat, url("../../img/mesh-top-left.png") bottom left no-repeat;
+  background-size: 50%, 50%;
+  position: absolute;
+  z-index: 1;
+  height: 515px;
+  width: 100%;
+  opacity: .65;
+}
+
+@media screen and (max-width: 991px) {
+  .mesh-layer {
     background: none;
   }
 }
