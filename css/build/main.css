@@ -1074,6 +1074,7 @@ address {
 }
 
 .topic-list li strong {
+  display: inline-block;
   margin-bottom: 5px;
 }
 
