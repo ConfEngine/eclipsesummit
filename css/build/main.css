@@ -1010,6 +1010,13 @@ address {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .sponsorship-list li {
+    font-size: 1em;
+    line-height: 25px;
+  }
+}
+
 .sponsorship-type {
   font-weight: 400;
   color: #443266;

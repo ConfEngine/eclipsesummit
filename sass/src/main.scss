@@ -778,6 +778,11 @@ address {
   li {
     font-size: 1.05em;
     margin-bottom: 5px;
+
+    @media screen and (max-width: $mediumBreakpoint) {
+      font-size: 1em;
+      line-height: 25px;
+    }
   }
 } 
 
