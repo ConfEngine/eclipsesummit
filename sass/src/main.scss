@@ -7,6 +7,8 @@ body {
   font-size: $baseFontSize;
   font-family: $baseFont;
   color: $textDark;
+  margin: 0;
+  padding: 0;
 }
 
 // Header styles
@@ -142,14 +144,16 @@ header {
 .speaker-image {
   width: 120px;
   height: auto;
+  border-radius: 50%;
 }
 
 .speaker-name {
+  font-size: .95em;
   margin: 10px 0 0;
   color: $darkPurple;
 
-  @media screen and (max-width: $smallBreakpoint) {
-    font-size: 1.05em;
+  @media screen and (max-width: $mediumBreakpoint) {
+    font-size: .85em;
     line-height: 20px;
   }
 }
@@ -492,7 +496,6 @@ address {
 
 .schedule {
   border-top: 1px solid lighten($lighterPurple, 5%);
-  padding: 70px 20px 0;
 }
 
 .schedule-wrapper {
@@ -612,6 +615,10 @@ address {
   margin-bottom: 35px;
   font-size: 1.35em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+
+  @media screen and (max-width: $smallBreakpoint) {
+    font-size: 1.1em;
+  }
 }
 
 .header-social {
@@ -626,6 +633,7 @@ address {
   text-align: left;
   font-size: .9em;
   border: 2px solid $darkPurple;
+  border-collapse: collapse;
 
   tr {
     border-bottom: 2px solid $darkPurple;
@@ -805,3 +813,8 @@ address {
   @include cursorPointer;
 } 
 
+.speakers-row a:hover,
+.organisers-row a:hover,
+.register-btn a:hover {
+  text-decoration: none;
+}

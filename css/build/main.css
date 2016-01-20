@@ -159,6 +159,8 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #444;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -316,16 +318,18 @@ header {
 .speaker-image {
   width: 120px;
   height: auto;
+  border-radius: 50%;
 }
 
 .speaker-name {
+  font-size: .95em;
   margin: 10px 0 0;
   color: #443266;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .speaker-name {
-    font-size: 1.05em;
+    font-size: .85em;
     line-height: 20px;
   }
 }
@@ -700,7 +704,6 @@ address {
 
 .schedule {
   border-top: 1px solid #e4e0ea;
-  padding: 70px 20px 0;
 }
 
 .schedule-wrapper {
@@ -828,6 +831,12 @@ address {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 480px) {
+  .location {
+    font-size: 1.1em;
+  }
+}
+
 .header-social {
   margin-top: 40px;
 }
@@ -839,6 +848,7 @@ address {
   text-align: left;
   font-size: .9em;
   border: 2px solid #443266;
+  border-collapse: collapse;
 }
 
 .pricing-table tr {
@@ -1032,4 +1042,10 @@ address {
 
 .text-toggle-expand:hover {
   cursor: pointer;
+}
+
+.speakers-row a:hover,
+.organisers-row a:hover,
+.register-btn a:hover {
+  text-decoration: none;
 }
