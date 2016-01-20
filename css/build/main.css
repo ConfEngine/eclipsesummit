@@ -322,14 +322,14 @@ header {
 }
 
 .speaker-name {
-  font-size: .95em;
   margin: 10px 0 0;
   color: #443266;
+  font-size: 1em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .speaker-name {
-    font-size: .85em;
+    font-size: .95em;
     line-height: 20px;
   }
 }
@@ -1048,4 +1048,18 @@ address {
 .organisers-row a:hover,
 .register-btn a:hover {
   text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .organisers-row .col-span-4,
+  .speakers-row .col-span-4 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .organisers-row,
+  .speakers-row {
+    width: 80%;
+  }
 }

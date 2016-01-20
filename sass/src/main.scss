@@ -148,12 +148,12 @@ header {
 }
 
 .speaker-name {
-  font-size: .95em;
   margin: 10px 0 0;
   color: $darkPurple;
+  font-size: 1em;
 
-  @media screen and (max-width: $mediumBreakpoint) {
-    font-size: .85em;
+  @media screen and (max-width: $smallBreakpoint) {
+    font-size: .95em;
     line-height: 20px;
   }
 }
@@ -817,4 +817,18 @@ address {
 .organisers-row a:hover,
 .register-btn a:hover {
   text-decoration: none;
+}
+
+.organisers-row .col-span-4,
+.speakers-row .col-span-4 {
+  @media screen and (max-width: $mediumBreakpoint) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .organisers-row,
+  .speakers-row {
+    width: 80%;
+  }
 }
