@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.initConfig({
         sass: {
             options: {
@@ -13,8 +13,19 @@ module.exports = function (grunt) {
         cssmin: {
             target: {
                 files: {
-                    'css/build/main.min.css': ['css/build/main.css']
+                    'css/build/main.min.css': ['css/build/main.css'],
+                    'node_modules/normalize.css/normalize.min.css': ['node_modules/normalize.css/normalize.css']
                 }
+            }
+        },
+        concat: {
+            css: {
+                src: ['node_modules/normalize.css/normalize.min.css', 'css/build/main.min.css'],
+                dest: 'css/build/main.min.css',
+            },
+            js: {
+                src: ['node_modules/jquery/dist/jquery.min.js', 'js/build/app.min.js'],
+                dest: 'js/build/app.min.js'
             }
         },
         watch: {
@@ -43,6 +54,7 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default', ['watch']);
