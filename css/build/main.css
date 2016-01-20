@@ -1063,3 +1063,22 @@ address {
     width: 80%;
   }
 }
+
+.topic-list {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.topic-list li {
+  margin-bottom: 25px;
+}
+
+.topic-list li strong {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .topic-list {
+    width: 100%;
+  }
+}

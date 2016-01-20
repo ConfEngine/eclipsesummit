@@ -832,3 +832,20 @@ address {
     width: 80%;
   }
 }
+
+.topic-list {
+  width: 55%;
+  margin: 0 auto;
+
+  li {
+    strong {
+      margin-bottom: 5px;
+    }
+
+    margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: $mediumBreakpoint) {
+    width: 100%;
+  }
+}
