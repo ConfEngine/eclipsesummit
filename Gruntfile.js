@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         concat: {
             css: {
                 src: ['node_modules/normalize.css/normalize.min.css', 'css/build/main.min.css'],
-                dest: 'css/build/main.min.css',
+                dest: 'css/build/main.min.css'
             },
             js: {
                 src: ['node_modules/jquery/dist/jquery.min.js', 'js/build/app.min.js'],
@@ -58,4 +58,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify']);
 };
