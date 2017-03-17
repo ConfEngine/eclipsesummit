@@ -565,7 +565,7 @@ header {
 
 .venue-image {
   height: 500px;
-  background-image: url("../../img/venue.jpg");
+  background-image: url("../../img/infosys.png");
   background-size: cover;
   margin-bottom: 0;
 }
@@ -577,7 +577,7 @@ header {
 }
 
 .venue-name {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.15);
   height: 100%;
   position: relative;
 }

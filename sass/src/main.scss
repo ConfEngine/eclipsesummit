@@ -346,7 +346,7 @@ header {
 
 .venue-image {
   height: 500px;
-  background-image: url('../../img/venue.jpg');
+  background-image: url('../../img/infosys.png');
   background-size: cover;
   margin-bottom: 0;
 
@@ -356,7 +356,7 @@ header {
 }
 
 .venue-name {
-  @include backgroundOpacity(#000, .55);
+  @include backgroundOpacity(#000, .15);
   height: 100%;
   position: relative;
 }
