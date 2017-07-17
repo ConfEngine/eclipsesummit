@@ -65,7 +65,7 @@
                 // Set/remove active class
                 menuItems
                     .parent().removeClass("nav-selected")
-                    .end().filter("[href=#"+id+"]").parent().addClass("nav-selected");
+                    .end().filter("[href='#"+id+"']").parent().addClass("nav-selected");
             }                   
 
             // Trigger fixed navigation menu
